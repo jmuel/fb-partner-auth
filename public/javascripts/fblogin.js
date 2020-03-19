@@ -37,3 +37,4 @@ FB.login(
       scope: scopes,
       extras: extras,
     },
+);
