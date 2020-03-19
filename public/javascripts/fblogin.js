@@ -16,14 +16,14 @@ let fbeConfig = {};
 //FBE Business Config
 const extras = {
   setup: {
-    external_business_id: externalBusinessId,
-    timezone: timezone,
-    currency: currency,
-    business_vertical: businessVertical,
+    external_business_id: 'test_id',
+    timezone: 'America/Manaus',
+    currency: 'USD',
+    business_vertical: 'ECOMMERCE',
   },
   business_config: {
     business: {
-      name: defaultBusinessName,
+      name: 'test_business',
     },
   },
   repeat: false,
