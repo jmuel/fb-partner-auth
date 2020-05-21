@@ -1,5 +1,10 @@
 extends layout
 
+
 block content
   h1= title
   p Welcome to #{title}
+
+  input#pixelID
+  button(value="", onclick='fbLogin()') Setup Pixel
+  p#tokenOut
