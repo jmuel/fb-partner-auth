@@ -33,7 +33,7 @@ function fbLogin() {
       console.log(response);
       const accessToken = response.authResponse.accessToken;
       const pixelID = document.getElementById("pixelID").value;
-      fetch(`https://localhost:3000/ssapiSetup?token=${accessToken}&pixel=${pixelID}`)
+      fetch(`ssapiSetup?token=${accessToken}&pixel=${pixelID}`)
       .then(response => response.json())
         .then(response => {
           console.log('access token', response);
