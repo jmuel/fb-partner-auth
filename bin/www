@@ -31,7 +31,7 @@ async function initializeServer () {
     const certs = await httpsLocalhost.getCerts()
     server = https.createServer(certs, app);
   } else {
-    server = http.createServer();
+    server = http.createServer(app);
   }
 
   /**
