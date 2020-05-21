@@ -3,8 +3,6 @@ const router = express.Router();
 
 const generateSystemUser = require('./generateSystemUser.js');
 
-const generateSystemUser = require('./generateSystemUser');
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'FB Partner Login Test App' });
