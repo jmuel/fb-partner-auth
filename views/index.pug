@@ -2,4 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to the #{title}
+  input#pixelID
+  a(href='javascript:void(0)' onClick='fbLogin()')
+    button Get Started

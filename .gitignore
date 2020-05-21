@@ -105,3 +105,6 @@ dist
 
 # Mac
 .DS_Store
+
+# Don't save the environment variables
+.env
