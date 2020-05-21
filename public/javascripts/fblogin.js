@@ -47,7 +47,12 @@ function fbLogin() {
       const accessToken = response.authResponse.accessToken;
       const pixelID = document.getElementById("pixelID").value;
       fetch(`https://localhost:3000/ssapiSetup?token=${accessToken}&pixel=${pixelID}`)
-        .then(response => console.log('access token', response));
+      .then(response => response.json())
+        .then(response => {
+          console.log('access token', response);
+          const tokenNode = document.getElementById('tokenOut');
+          tokenNode.textContent = response;
+          });
     },
     {
       scope: ['business_management','ads_management']
