@@ -8,7 +8,10 @@ var app = require('../app');
 var debug = require('debug')('fb-partner-auth:server');
 var http = require('http');
 const https = require('https');
-const httpsLocalhost = require("https-localhost")()
+const httpsLocalhost = require("https-localhost")();
+
+require('dotenv').config();
+const dev = process.env.DEV;
 
 /**
  * Get port from environment and store in Express.
@@ -23,8 +26,12 @@ app.set('port', port);
 let server;
 
 async function initializeServer () {
-  const certs = await httpsLocalhost.getCerts()
-  server = https.createServer(certs, app);
+  if (dev) {
+    const certs = await httpsLocalhost.getCerts()
+    server = https.createServer(certs, app);
+  } else {
+    server = http.createServer();
+  }
 
   /**
    * Listen on provided port, on all network interfaces.

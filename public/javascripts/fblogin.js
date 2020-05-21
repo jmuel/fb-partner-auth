@@ -5,19 +5,6 @@ const scopes =
   'ads_management,ads_read,manage_business_extension,business_management';
 const jsVersion = 'v6.0';
 
-
-// FBE Config state
-let fbeConfig = {};
-
-const appSecret = 'dfee24d963c6937c1756d0ebe9c0aa6f';
-function getHash(message){
-    var hash = CryptoJS.HmacSHA256(message, appSecret);
-    console.log('hash: ', hash);
-    var hashInHex = CryptoJS.enc.Hex.stringify(hash);
-    console.log('hash: ', hashInHex);
-    return hashInHex;
-};
-
 window.fbAsyncInit = function() {
   // FB JavaScript SDK configuration and setup
   FB.init({
