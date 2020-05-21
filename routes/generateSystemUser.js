@@ -5,7 +5,6 @@ const result = require('dotenv').config();
 
 const partnerBusinessAdminAccessToken = process.env.BUSINESS_ADMIN_ACCESS_TOKEN;
 const partnerBusinessId = process.env.BUSINESS_ID;
-const appSecret = process.env.APP_SECRET;
 const appId = process.env.APP_ID;
 
 const Business = bizSdk.Business;
